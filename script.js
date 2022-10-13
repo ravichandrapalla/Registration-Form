@@ -7,7 +7,7 @@ function DocReset() {
   document.getElementById("City").value = "";
   document.getElementById("State").value = "none";
   document.getElementById("zip").value = "";
-  document.getElementById("TNC").value = "";
+  document.getElementById("TNC").checked = false;
   let validfeedbacks = document.getElementsByClassName("valid-feedback");
   let invalidfeedbacks = document.getElementsByClassName("invalid-feedback");
 
@@ -101,3 +101,9 @@ function validate() {
     DocReset();
   }
 }
+/*function sub() {
+  finalcheck = true;
+  validate();
+}
+const form = document.getElementById("form");
+form.addEventListener(".button", sub());*/
