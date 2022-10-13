@@ -1,0 +1,21 @@
+input[type="text"],
+textarea {
+  background-color: black;
+}
+label,
+h1 {
+  color: whitesmoke;
+}
+.color {
+  background-color: hsl(93, 21%, 10%);
+}
+.Registration-form {
+  width: 800px;
+  margin: 10px auto;
+  border-radius: 15px;
+}
+.invalid-feedback,
+.valid-feedback,
+#invalid-tnc {
+  display: none;
+}
