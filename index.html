@@ -164,6 +164,7 @@
             value=""
             id="TNC"
             required
+            onchange="validate(false)"
             autocomplete="on"
           />
           <label class="form-check-label" for="TNC">
@@ -175,7 +176,7 @@
         </div>
       </div>
       <div class="col-12" style="text-align: center">
-        <button class="btn btn-dark" type="button" onclick="validate()">
+        <button class="btn btn-dark" type="button" onclick="validate(true)">
           Submit form
         </button>
       </div>

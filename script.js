@@ -18,7 +18,10 @@ function DocReset() {
     invalidfeedbacks[i].style.display = "none";
   }
 }
-function validate() {
+
+let clicked_submit = false;
+
+function validate(isSubmit = false) {
   let fn = document.getElementById("FirstName").value;
   let ln = document.getElementById("LastName").value;
   let eml = document.getElementById("E-mail").value;
@@ -27,6 +30,9 @@ function validate() {
   let zp = document.getElementById("zip").value;
   let tc = document.getElementById("TNC").checked;
 
+  if (isSubmit) {
+    clicked_submit = true;
+  }
   let error = false;
 
   if (fn.length > 2) {
@@ -96,9 +102,10 @@ function validate() {
     document.getElementById("invalid-tnc").style.display = "none";
   }
 
-  if (!error) {
+  if (!error && clicked_submit) {
     alert("Your details have been saved successfully!");
     DocReset();
+    clicked_submit = false;
   }
 }
 /*function sub() {
